@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Resources</title>
+<style>
+    body {
+        margin: 60px 0;
+        text-align: center;
+    }
+
+    a {
+        font-size: 2.6em;
+        display: block;
+        color: black;
+    }
+</style>
+
+<script>
+
+var data = [
+{ label : "Rubric", url : "https://review.udacity.com/#!/rubrics/13/view"},
+{ label : "My Branch in github", url : "https://github.com/dumulong/frontend-nanodegree-resume"},
+{ label : "Project details (GitHub)", url : "https://github.com/udacity/frontend-nanodegree-resume/blob/master/README.md"},
+{ label : "Resume Mock", url : "https://camo.githubusercontent.com/f4c154444bc91d29cab9f120a480277f673015f5/687474703a2f2f692e696d6775722e636f6d2f7057553158626c2e706e67"}
+];
+
+</script>
+
+</head>
+
+<body>
+
+<script>
+
+buildPage = function () {
+    var body = document.getElementsByTagName("body");
+    for (var i=0 ; i < data.length; i++) {
+        var anchor = document.createElement("a");
+        anchor.setAttribute('href', data[i].url);
+        anchor.setAttribute('target', "_blank");
+        var text = document.createTextNode(data[i].label);
+        anchor.appendChild(text);
+        body[0].appendChild(anchor);
+    }
+}
+
+buildPage();
+
+</script>
+
+</body>
+</html>
