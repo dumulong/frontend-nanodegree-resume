@@ -1,3 +1,4 @@
+
 /* --------------------------------------------------------------- */
 /* bio data */
 /* --------------------------------------------------------------- */
@@ -26,14 +27,14 @@ var work = {
             title: "Cook",
             location: "Quebec, QC Canada",
             dates: "in progress",
-            description: "Nunc vehicula, lectus sed aliquam lobortis, nisi eros vulputate arcu, sit amet blandit nisi orci nec diam. Praesent at dignissim mauris. Maecenas bibendum velit quis interdum tristique. Donec ut eros lectus. Duis rhoncus quam vel turpis sodales ornare. Quisque ex velit, mollis sed nisl quis, pretium varius sem. Aliquam ornare est sed nisl dapibus molestie. Maecenas mi elit, varius sodales sem vel, venenatis suscipit magna. Donec et faucibus purus, sit amet ultrices lectus. Donec augue erat, porta id metus vel, sodales tincidunt leo. Vivamus pellentesque lacus erat, et egestas nisi interdum ac.",
+            description: "Nunc vehicula, lectus sed aliquam lobortis, nisi eros vulputate arcu, sit amet blandit nisi orci nec diam. Praesent at dignissim mauris. Maecenas bibendum velit quis interdum tristique. Donec ut eros lectus. Duis rhoncus quam vel turpis sodales ornare. Quisque ex velit, mollis sed nisl quis, pretium varius sem. Aliquam ornare est sed nisl dapibus molestie. Maecenas mi elit, varius sodales sem vel, venenatis suscipit magna. Donec et faucibus purus, sit amet ultrices lectus. Donec augue erat, porta id metus vel, sodales tincidunt leo. Vivamus pellentesque lacus erat, et egestas nisi interdum ac."
         },
         {
             employer: "Chez Henrietta",
             title: "Cook",
             location: "Montreal, QC Canada",
             dates: "03/01/2013 - 04/01/2013",
-            description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum sollicitudin tortor ut iaculis cursus. Maecenas euismod est semper condimentum sodales. Cras eget nisi malesuada, bibendum lorem sit amet, tempus sem. Cras eget purus tincidunt, pellentesque massa et, volutpat nibh. In ornare lorem at ante tincidunt elementum ut ac diam. Proin convallis justo eget diam ornare suscipit. Suspendisse vehicula, odio viverra cursus laoreet, est tortor dignissim odio, sit amet porttitor quam sapien ac lacus.",
+            description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum sollicitudin tortor ut iaculis cursus. Maecenas euismod est semper condimentum sodales. Cras eget nisi malesuada, bibendum lorem sit amet, tempus sem. Cras eget purus tincidunt, pellentesque massa et, volutpat nibh. In ornare lorem at ante tincidunt elementum ut ac diam. Proin convallis justo eget diam ornare suscipit. Suspendisse vehicula, odio viverra cursus laoreet, est tortor dignissim odio, sit amet porttitor quam sapien ac lacus."
         }
     ]
 };
@@ -89,7 +90,7 @@ var education = {
             school: "Hard Knocks",
             dates: "03/01/2013 - 04/01/2013",
             url: "http://google.com"
-        },
+        }
     ]
 
 };
@@ -137,13 +138,13 @@ bio.display = function () {
     });
 
     //While we are at it, fill the contact in the bottom:
-    var $contact = $("#footerContacts");
-    $contact.append(_mobile);
-    $contact.append(_email);
-    $contact.append(_github);
-    $contact.append(_twitter);
-    $contact.append(_location);
-}
+    var $footContact = $("#footerContacts");
+    $footContact.append(_mobile);
+    $footContact.append(_email);
+    $footContact.append(_github);
+    $footContact.append(_twitter);
+    $footContact.append(_location);
+};
 
 /* --------------------------------------------------------------- */
 /* work display */
@@ -168,7 +169,7 @@ work.display = function () {
         $lastEntry.append(_workDescription);
     });
 
-}
+};
 
 /* --------------------------------------------------------------- */
 /* projects display */
@@ -193,7 +194,7 @@ projects.display = function () {
             $lastEntry.append(_pic);
         });
     });
-}
+};
 
 /* --------------------------------------------------------------- */
 /* eduction display */
@@ -236,7 +237,7 @@ education.display = function () {
         $lastEntry.append(_onlineURL);
 
     });
-}
+};
 
 /* --------------------------------------------------------------- */
 /* Where I lived and worked display */
@@ -246,4 +247,4 @@ var whereILived = {
     display: function () {
         $("#mapDiv").append(googleMap);
     }
-}
+};
