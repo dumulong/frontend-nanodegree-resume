@@ -1,12 +1,10 @@
-
 /* --------------------------------------------------------------- */
 /* bio data */
 /* --------------------------------------------------------------- */
-
 var bio = {
-    name : "Denis Dumulong",
-    role : "Web Developer",
-    contacts : {
+    name: "Denis Dumulong",
+    role: "Web Developer",
+    contacts: {
         mobile: "(210) 867-5309",
         email: "Mickey@Mouse.com",
         github: "https://github.com/ThisIsIt",
@@ -14,7 +12,7 @@ var bio = {
         location: "San Antonio, TX"
     },
     welcomeMessage: "Proin convallis justo eget diam ornare suscipit. Sit amet porttitor quam sapien ac lacus.",
-    skills: [ "Javascript", "HTML", "CSS" ],
+    skills: ["Javascript", "HTML", "CSS"],
     biopic: "http://via.placeholder.com/200x250/FF5733/ffffff?text=My+Photo"
 };
 
@@ -23,8 +21,7 @@ var bio = {
 /* --------------------------------------------------------------- */
 
 var work = {
-    jobs: [
-        {
+    jobs: [{
             employer: "Chez Henry",
             title: "Cook",
             location: "Quebec, QC Canada",
@@ -46,18 +43,16 @@ var work = {
 /* --------------------------------------------------------------- */
 
 var projects = {
-    projects: [
-        {
-          title: "How to make stuff up",
-          dates: "03/01/2013 - 04/01/2013",
-          description: "Curabitur semper velit sed libero cursus condimentum. Cras bibendum interdum libero non tincidunt. Nam vel fermentum sapien. Nam vitae ipsum fermentum, dapibus eros et, scelerisque lacus. Integer dapibus ut neque a pellentesque. Duis euismod, velit at pharetra tincidunt, tellus nisl finibus erat, nec porta arcu est ut enim. Morbi eu diam non eros consequat semper. Quisque et risus nunc. Nam molestie dui non sem porttitor, ac fringilla orci mollis. Aliquam eget pharetra nibh. Praesent faucibus, mauris non imperdiet blandit, dui nunc dignissim enim, non molestie tortor dolor at enim. Phasellus hendrerit venenatis sapien, scelerisque porta magna dictum vitae. Donec dignissim, enim et vestibulum egestas, diam dolor dignissim nisl, hendrerit sagittis metus diam sed nunc.",
-          images: [
+    projects: [{
+        title: "How to make stuff up",
+        dates: "03/01/2013 - 04/01/2013",
+        description: "Curabitur semper velit sed libero cursus condimentum. Cras bibendum interdum libero non tincidunt. Nam vel fermentum sapien. Nam vitae ipsum fermentum, dapibus eros et, scelerisque lacus. Integer dapibus ut neque a pellentesque. Duis euismod, velit at pharetra tincidunt, tellus nisl finibus erat, nec porta arcu est ut enim. Morbi eu diam non eros consequat semper. Quisque et risus nunc. Nam molestie dui non sem porttitor, ac fringilla orci mollis. Aliquam eget pharetra nibh. Praesent faucibus, mauris non imperdiet blandit, dui nunc dignissim enim, non molestie tortor dolor at enim. Phasellus hendrerit venenatis sapien, scelerisque porta magna dictum vitae. Donec dignissim, enim et vestibulum egestas, diam dolor dignissim nisl, hendrerit sagittis metus diam sed nunc.",
+        images: [
             "http://via.placeholder.com/350x300/f5ae23/000?text=Some+Pic",
             "http://via.placeholder.com/200x300/f5ae23/000?text=Some+Other+Pic",
             "http://via.placeholder.com/350x300/f5ae23/fff?text=Last+Pic"
-            ]
-        }
-    ]
+        ]
+    }]
 };
 
 /* --------------------------------------------------------------- */
@@ -66,8 +61,7 @@ var projects = {
 
 var education = {
 
-    schools: [
-        {
+    schools: [{
             name: "Some Elementary School",
             location: "Joliette, QC Canada",
             degree: "BA",
@@ -84,8 +78,7 @@ var education = {
             url: "http://google.com"
         }
     ],
-    onlineCourses: [
-        {
+    onlineCourses: [{
             title: "The Art of Passing",
             school: "Unknown",
             dates: "03/01/2012 - 04/01/2012",
@@ -106,7 +99,7 @@ var education = {
 /* bio display */
 /* --------------------------------------------------------------- */
 
-bio.display = function () {
+bio.display = function() {
 
     var _headerName = HTMLheaderName.replace("%data%", bio.name);
     var _headerRole = HTMLheaderRole.replace("%data%", bio.role);
@@ -120,7 +113,7 @@ bio.display = function () {
 
     $("#header").append(_headerName);
     $("#header").append(_headerRole);
-    
+
     //Move the contacts back down..
     //There are many ways to deal with this section... but this is
     //the way I think it should be done.  I believe that it's easier to maintain..
@@ -156,7 +149,7 @@ bio.display = function () {
 /* work display */
 /* --------------------------------------------------------------- */
 
-work.display = function () {
+work.display = function() {
 
     this.jobs.forEach(function(elm) {
 
@@ -181,7 +174,7 @@ work.display = function () {
 /* projects display */
 /* --------------------------------------------------------------- */
 
-projects.display = function () {
+projects.display = function() {
 
     this.projects.forEach(function(elm) {
 
@@ -206,7 +199,7 @@ projects.display = function () {
 /* eduction display */
 /* --------------------------------------------------------------- */
 
-education.display = function () {
+education.display = function() {
 
     this.schools.forEach(function(elm) {
 
@@ -249,8 +242,8 @@ education.display = function () {
 /* Where I lived and worked display */
 /* --------------------------------------------------------------- */
 
-var whereILived =  {
-    display : function () {
+var whereILived = {
+    display: function() {
         $("#mapDiv").append(googleMap);
     }
 }
