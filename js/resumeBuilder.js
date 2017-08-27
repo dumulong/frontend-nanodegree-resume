@@ -1,4 +1,3 @@
-
 /* --------------------------------------------------------------- */
 /* bio data */
 /* --------------------------------------------------------------- */
@@ -162,8 +161,7 @@ work.display = function () {
 
         $("#workExperience").append(HTMLworkStart);
         var $lastEntry = $(".work-entry:last");
-        $lastEntry.append(_workEmployer);
-        $lastEntry.append(_workTitle);
+        $lastEntry.append(_workEmployer + _workTitle);
         $lastEntry.append(_workDates);
         $lastEntry.append(_workLocation);
         $lastEntry.append(_workDescription);
@@ -212,8 +210,7 @@ education.display = function () {
 
         $("#education").append(HTMLschoolStart);
         var $lastEntry = $(".education-entry:last");
-        $lastEntry.append(_schoolName);
-        $lastEntry.append(_schoolDegree);
+        $lastEntry.append(_schoolName + _schoolDegree);
         $lastEntry.append(_schoolDates);
         $lastEntry.append(_schoolLocation);
         $lastEntry.append(_schoolMajor);
@@ -231,8 +228,7 @@ education.display = function () {
 
         $("#education").append(HTMLschoolStart);
         var $lastEntry = $(".education-entry:last");
-        $lastEntry.append(_onlineTitle);
-        $lastEntry.append(_onlineSchool);
+        $lastEntry.append(_onlineTitle + _onlineSchool);
         $lastEntry.append(_onlineDates);
         $lastEntry.append(_onlineURL);
 

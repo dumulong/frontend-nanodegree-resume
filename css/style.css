@@ -12,6 +12,7 @@ h6 {
     padding: 0;
     margin: 0;
     font-family: "Roboto", sans-serif;
+    font-weight: 300;
 }
 
 .clear-fix {
@@ -60,6 +61,10 @@ h5 {
     padding: 10px 5%;
 }
 
+#education h3 {
+    margin-top: 20px;
+}
+
 .date-text {
     font-style: italic;
     font-size: 14px;
@@ -87,6 +92,11 @@ a {
     text-decoration: none;
     margin-top: 10px;
     display: block;
+}
+
+#topContacts {
+    border-bottom: 1px inset white;
+    margin-bottom: 20px;
 }
 
 .welcome-message {
@@ -131,6 +141,11 @@ a {
     background-color: #484848;
 }
 
+.project-entry img {
+    padding-left: 0;
+    padding-right: 20px;
+}
+
 .flex-box {
     display: -webkit-flex;
     display: flex;
@@ -158,6 +173,8 @@ ul {
 .biopic {
     float: left;
     padding: 10px;
+    padding-left: 0;
+    padding-top: 0;
     width: 200px;
     display: none;
 }
