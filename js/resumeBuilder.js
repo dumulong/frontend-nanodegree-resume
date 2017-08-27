@@ -9,13 +9,13 @@ var bio = {
     contacts : {
         mobile: "(210) 867-5309",
         email: "MickeyMouse@disney.com",
-        github: "https://github.com/Thisisit",
-        twitter: "",
+        github: "https://github.com/ThisIsIt",
+        twitter: "https://twitter.com/TwitIt",
         location: "San Antonio"
     },
     welcomeMessage: "Hey, there!",
     skills: [ "Javascript", "HTML", "CSS", "Other" ],
-    biopic: "http://via.placeholder.com/350x300",
+    biopic: "http://via.placeholder.com/200x250/FF5733/ffffff?text=My+Photo",
     display: function () {
 
         var _headerName = HTMLheaderName.replace("%data%", bio.name);
@@ -103,7 +103,11 @@ var projects = {
           title: "How to make stuff up",
           dates: "03/01/2013 - 04/01/2013",
           description: "Just making stuff up... I did not do anything, really...",
-          images: [ "http://via.placeholder.com/350x300", "http://via.placeholder.com/350x300", "http://via.placeholder.com/350x300" ]
+          images: [
+            "http://via.placeholder.com/350x300/3396FF/000?text=Some+Pic",
+            "http://via.placeholder.com/200x300/3396FF/000?text=Some+Other+Pic",
+            "http://via.placeholder.com/350x300/3396FF/fff?text=Last+Pic"
+            ]
         }
     ],
     display: function () {
