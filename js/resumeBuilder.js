@@ -122,8 +122,13 @@ bio.display = function () {
     var _bioPic = HTMLbioPic.replace("%data%", bio.biopic);
     var _welcomeMsg = HTMLwelcomeMsg.replace("%data%", bio.welcomeMessage);
 
-    $("#header").prepend(_headerName);
-    $("#header h1").append(_headerRole);
+    $("#header").append(_headerName);
+    $("#header").append(_headerRole);
+    
+    //Move the contacts back down..
+    //There are many ways to deal with this section... but this is
+    //the way I think it should be done.  I believe that it's easier to maintain..
+    $("#topContacts").appendTo("#header");
 
     var $contact = $("#topContacts");
     $contact.append(_mobile);
