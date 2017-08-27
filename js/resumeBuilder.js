@@ -99,7 +99,7 @@ var education = {
 /* bio display */
 /* --------------------------------------------------------------- */
 
-bio.display = function() {
+bio.display = function () {
 
     var _headerName = HTMLheaderName.replace("%data%", bio.name);
     var _headerRole = HTMLheaderRole.replace("%data%", bio.role);
@@ -131,7 +131,7 @@ bio.display = function() {
     $("#header").append(_welcomeMsg);
     $("#header").append(HTMLskillsStart);
 
-    this.skills.forEach(function(elm) {
+    this.skills.forEach(function (elm) {
         var _skill = HTMLskills.replace("%data%", elm);
         $("#header").append(_skill);
     });
@@ -149,9 +149,9 @@ bio.display = function() {
 /* work display */
 /* --------------------------------------------------------------- */
 
-work.display = function() {
+work.display = function () {
 
-    this.jobs.forEach(function(elm) {
+    this.jobs.forEach(function (elm) {
 
         var _workEmployer = HTMLworkEmployer.replace("%data%", elm.employer);
         var _workTitle = HTMLworkTitle.replace("%data%", elm.title);
@@ -174,9 +174,9 @@ work.display = function() {
 /* projects display */
 /* --------------------------------------------------------------- */
 
-projects.display = function() {
+projects.display = function () {
 
-    this.projects.forEach(function(elm) {
+    this.projects.forEach(function (elm) {
 
         var _projectTitle = HTMLprojectTitle.replace("%data%", elm.title);
         var _projectDates = HTMLprojectDates.replace("%data%", elm.dates);
@@ -188,7 +188,7 @@ projects.display = function() {
         $lastEntry.append(_projectTitle);
         $lastEntry.append(_projectDates);
         $lastEntry.append(_projectDescription);
-        elm.images.forEach(function(pic) {
+        elm.images.forEach(function (pic) {
             var _pic = HTMLprojectImage.replace("%data%", pic);
             $lastEntry.append(_pic);
         });
@@ -199,9 +199,9 @@ projects.display = function() {
 /* eduction display */
 /* --------------------------------------------------------------- */
 
-education.display = function() {
+education.display = function () {
 
-    this.schools.forEach(function(elm) {
+    this.schools.forEach(function (elm) {
 
         var _schoolName = HTMLschoolName.replace("%data%", elm.name).replace("#", elm.url);
         var _schoolDegree = HTMLschoolDegree.replace("%data%", elm.degree);
@@ -221,7 +221,7 @@ education.display = function() {
 
     $("#education").append(HTMLonlineClasses);
 
-    this.onlineCourses.forEach(function(elm) {
+    this.onlineCourses.forEach(function (elm) {
 
         var _onlineTitle = HTMLonlineTitle.replace("%data%", elm.title);
         var _onlineSchool = HTMLonlineSchool.replace("%data%", elm.school);
@@ -243,7 +243,7 @@ education.display = function() {
 /* --------------------------------------------------------------- */
 
 var whereILived = {
-    display: function() {
+    display: function () {
         $("#mapDiv").append(googleMap);
     }
 }
