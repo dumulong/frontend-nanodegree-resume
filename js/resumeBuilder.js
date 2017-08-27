@@ -13,7 +13,7 @@ var bio = {
     },
     welcomeMessage: "Proin convallis justo eget diam ornare suscipit. Sit amet porttitor quam sapien ac lacus.",
     skills: ["Javascript", "HTML", "CSS"],
-    biopic: "http://via.placeholder.com/200x250/FF5733/ffffff?text=My+Photo"
+    biopic: "images/fry.jpg"
 };
 
 /* --------------------------------------------------------------- */
@@ -48,9 +48,9 @@ var projects = {
         dates: "03/01/2013 - 04/01/2013",
         description: "Curabitur semper velit sed libero cursus condimentum. Cras bibendum interdum libero non tincidunt. Nam vel fermentum sapien. Nam vitae ipsum fermentum, dapibus eros et, scelerisque lacus. Integer dapibus ut neque a pellentesque. Duis euismod, velit at pharetra tincidunt, tellus nisl finibus erat, nec porta arcu est ut enim. Morbi eu diam non eros consequat semper. Quisque et risus nunc. Nam molestie dui non sem porttitor, ac fringilla orci mollis. Aliquam eget pharetra nibh. Praesent faucibus, mauris non imperdiet blandit, dui nunc dignissim enim, non molestie tortor dolor at enim. Phasellus hendrerit venenatis sapien, scelerisque porta magna dictum vitae. Donec dignissim, enim et vestibulum egestas, diam dolor dignissim nisl, hendrerit sagittis metus diam sed nunc.",
         images: [
-            "http://via.placeholder.com/350x300/f5ae23/000?text=Some+Pic",
-            "http://via.placeholder.com/200x300/f5ae23/000?text=Some+Other+Pic",
-            "http://via.placeholder.com/350x300/f5ae23/fff?text=Last+Pic"
+            "images/197x148.gif",
+            "images/197x148.gif",
+            "images/197x148.gif"
         ]
     }]
 };
