@@ -8,13 +8,13 @@ var bio = {
     role : "Web Developer",
     contacts : {
         mobile: "(210) 867-5309",
-        email: "MickeyMouse@disney.com",
+        email: "Mickey@Mouse.com",
         github: "https://github.com/ThisIsIt",
         twitter: "https://twitter.com/TwitIt",
-        location: "San Antonio"
+        location: "San Antonio, TX"
     },
     welcomeMessage: "Proin convallis justo eget diam ornare suscipit. Sit amet porttitor quam sapien ac lacus.",
-    skills: [ "Javascript", "HTML", "CSS", "Other" ],
+    skills: [ "Javascript", "HTML", "CSS" ],
     biopic: "http://via.placeholder.com/200x250/FF5733/ffffff?text=My+Photo"
 };
 
@@ -27,14 +27,14 @@ var work = {
         {
             employer: "Chez Henry",
             title: "Cook",
-            location: "French place",
+            location: "Quebec, QC Canada",
             dates: "in progress",
             description: "Nunc vehicula, lectus sed aliquam lobortis, nisi eros vulputate arcu, sit amet blandit nisi orci nec diam. Praesent at dignissim mauris. Maecenas bibendum velit quis interdum tristique. Donec ut eros lectus. Duis rhoncus quam vel turpis sodales ornare. Quisque ex velit, mollis sed nisl quis, pretium varius sem. Aliquam ornare est sed nisl dapibus molestie. Maecenas mi elit, varius sodales sem vel, venenatis suscipit magna. Donec et faucibus purus, sit amet ultrices lectus. Donec augue erat, porta id metus vel, sodales tincidunt leo. Vivamus pellentesque lacus erat, et egestas nisi interdum ac.",
         },
         {
             employer: "Chez Henrietta",
             title: "Cook",
-            location: "Same French place",
+            location: "Montreal, QC Canada",
             dates: "03/01/2013 - 04/01/2013",
             description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum sollicitudin tortor ut iaculis cursus. Maecenas euismod est semper condimentum sodales. Cras eget nisi malesuada, bibendum lorem sit amet, tempus sem. Cras eget purus tincidunt, pellentesque massa et, volutpat nibh. In ornare lorem at ante tincidunt elementum ut ac diam. Proin convallis justo eget diam ornare suscipit. Suspendisse vehicula, odio viverra cursus laoreet, est tortor dignissim odio, sit amet porttitor quam sapien ac lacus.",
         }
@@ -69,19 +69,19 @@ var education = {
     schools: [
         {
             name: "Some Elementary School",
-            location: "NoWhere Near",
+            location: "Joliette, QC Canada",
             degree: "BA",
             majors: "Pain",
             dates: "01/01/2001 - 02/01/2001",
-            url: "http://fakefreakingschool.com/NoWhere"
+            url: "http://google.com"
         },
         {
             name: "Some High School",
-            location: "Closer then the Other",
+            location: "Joliette, QC Canada",
             degree: "Master",
             majors: "More like Kernel",
             dates: "03/01/2001 - 04/01/2001",
-            url: "http://fakefreakingschool.com/Closer"
+            url: "http://google.com"
         }
     ],
     onlineCourses: [
@@ -89,13 +89,13 @@ var education = {
             title: "The Art of Passing",
             school: "Unknown",
             dates: "03/01/2012 - 04/01/2012",
-            url: "http://fraudschool.com/online"
+            url: "http://google.com"
         },
         {
             title: "The Art of Art",
             school: "Hard Knocks",
             dates: "03/01/2013 - 04/01/2013",
-            url: "http://fraudschool.com/nothardatall"
+            url: "http://google.com"
         },
     ]
 
@@ -210,8 +210,7 @@ education.display = function () {
 
     this.schools.forEach(function(elm) {
 
-        var _schoolName = HTMLschoolName.replace("%data%", elm.name);
-        _schoolName = _schoolName.replace("#", elm.url);
+        var _schoolName = HTMLschoolName.replace("%data%", elm.name).replace("#", elm.url);
         var _schoolDegree = HTMLschoolDegree.replace("%data%", elm.degree);
         var _schoolDates = HTMLschoolDates.replace("%data%", elm.dates);
         var _schoolLocation = HTMLschoolLocation.replace("%data%", elm.location);
@@ -234,7 +233,7 @@ education.display = function () {
         var _onlineTitle = HTMLonlineTitle.replace("%data%", elm.title);
         var _onlineSchool = HTMLonlineSchool.replace("%data%", elm.school);
         var _onlineDates = HTMLonlineDates.replace("%data%", elm.dates);
-        var _onlineURL = HTMLonlineURL.replace("%data%", elm.url);
+        var _onlineURL = HTMLonlineURL.replace(/\%data\%|#/g, elm.url);
 
         $("#education").append(HTMLschoolStart);
         var $lastEntry = $(".education-entry:last");
@@ -244,4 +243,14 @@ education.display = function () {
         $lastEntry.append(_onlineURL);
 
     });
+}
+
+/* --------------------------------------------------------------- */
+/* Where I lived and worked display */
+/* --------------------------------------------------------------- */
+
+var whereILived =  {
+    display : function () {
+        $("#mapDiv").append(googleMap);
+    }
 }
